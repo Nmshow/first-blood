@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3ef">
+  <meta name="description" content="持续整理 OpenAI、Google、Microsoft、Anthropic、百度、腾讯等公开渠道的人工智能资讯。">
+  <title>人工智能观察室</title>
+  <link rel="stylesheet" href="/static/site.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="masthead">
+      <a class="wordmark" href="/" aria-label="人工智能观察室首页">
+        <span class="wordmark-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>人工智能<span class="wordmark-light">观察室</span></span>
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        <a class="active" href="#精选">资讯精选</a>
+        <a href="#来源">来源动态</a>
+        <a href="#核验">核验说明</a>
+      </nav>
+      <div class="masthead-date"><span class="live-dot"></span><time id="today">正在读取日期</time></div>
+    </header>
+
+    <main>
+      <section class="edition-head" aria-labelledby="page-title">
+        <div class="edition-label"><span>第 01 期</span><span class="label-rule"></span><span>公开来源 · 一手核验</span></div>
+        <div class="edition-grid">
+          <div>
+            <h1 id="page-title">技术前沿，<br><em>每日读懂。</em></h1>
+            <p class="edition-deck">从官方公告出发，追踪人工智能的真实进展。</p>
+          </div>
+          <div class="edition-aside">
+            <div class="edition-count"><strong id="featured-count">—</strong><span>条精选资讯</span></div>
+            <p>每条内容均附原始来源。未找到官方依据的消息，不进入精选。</p>
+          </div>
+        </div>
+        <div class="edition-bottom">
+          <div class="update-indicator"><span class="pulse-ring"></span><span id="update-state">正在读取采集状态</span></div>
+          <div class="edition-facts"><span>每 30 分钟检查</span><span class="fact-separator"></span><span>简体中文整理</span></div>
+        </div>
+      </section>
+
+      <div class="content-grid">
+        <section class="stories-section" id="精选" aria-labelledby="stories-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">编辑精选 <span>·</span> 最近动态</p>
+              <h2 id="stories-title">今日简报</h2>
+            </div>
+            <div class="filters" id="filters" aria-label="按资讯类别筛选">
+              <button class="filter active" type="button" data-filter="全部">全部</button>
+              <button class="filter" type="button" data-filter="安全">安全</button>
+              <button class="filter" type="button" data-filter="产品">产品</button>
+              <button class="filter" type="button" data-filter="研究">研究</button>
+              <button class="filter" type="button" data-filter="商业">商业</button>
+            </div>
+          </div>
+          <div class="story-list" id="story-list" aria-live="polite">
+            <div class="loading-state"><span class="loading-mark"></span><span>正在整理最新资讯…</span></div>
+          </div>
+          <div class="empty-state" id="empty-state" hidden>
+            <span class="empty-symbol">∅</span>
+            <h3>暂时没有符合条件的精选</h3>
+            <p>采集到的新内容需要先核对官方来源并完成中文整理。</p>
+          </div>
+          <div class="shortage-note" id="shortage-note" hidden>当前通过核验的资讯不足 5 条；页面只展示已核实内容。</div>
+        </section>
+
+        <aside class="right-rail">
+          <section class="source-panel" id="来源" aria-labelledby="source-title">
+            <div class="rail-heading">
+              <div><p class="eyebrow">SOURCE INDEX</p><h2 id="source-title">来源覆盖</h2></div>
+              <span class="source-total" id="source-total">—</span>
+            </div>
+            <p class="rail-intro">优先追溯机构官网与官方博客。社交平台仅纳入无需登录且可稳定读取的公开内容。</p>
+            <ul class="source-list" id="source-list"><li class="source-loading">正在读取来源状态</li></ul>
+            <div class="legend"><span class="legend-mark good"></span>最近采集成功<span class="legend-mark pending"></span>等待接入或核查</div>
+          </section>
+
+          <section class="verification-panel" id="核验" aria-labelledby="verify-title">
+            <div class="verification-seal" aria-hidden="true"><span>原文<br>可溯</span></div>
+            <p class="eyebrow">编辑原则</p>
+            <h2 id="verify-title">先核验，再摘要。</h2>
+            <p>精选条目必须回到发布机构的一手页面，核对发布主体、日期与关键内容。模型只负责中文整理，不替代原始证据。</p>
+            <a href="#核验详情" class="text-link" id="show-method">查看核验说明 <span aria-hidden="true">↗</span></a>
+            <div class="method-details" id="核验详情" hidden>
+              <p>网页会保留原文链接、发布时间、采集时间与核验时间。无法读取原文、日期不明确或中文整理未完成的条目会留在待处理区，不作为已核实资讯发布。</p>
+            </div>
+          </section>
+
+          <section class="operations-panel" aria-labelledby="ops-title">
+            <div class="ops-top"><p class="eyebrow">采集状态</p><span class="ops-dot" id="ops-dot"></span></div>
+            <h2 id="ops-title">持续更新中</h2>
+            <p id="last-update">尚未完成本次采集</p>
+            <button class="refresh-button" id="refresh-button" type="button"><span aria-hidden="true">↻</span> 立即检查公开来源</button>
+            <p class="refresh-message" id="refresh-message" aria-live="polite"></p>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-brand">人工智能观察室</div>
+      <p>让每一条技术消息，都能回到它最初的出处。</p>
+      <span class="footer-date">更新节奏：每 30 分钟</span>
+    </footer>
+  </div>
+  <script src="/static/site.js" defer></script>
+</body>
+</html>
